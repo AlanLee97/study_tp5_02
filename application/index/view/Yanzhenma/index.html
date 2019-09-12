@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="{:url('check')}" method="post">
+    <img src="{:captcha_src()}" alt="">
+    <p>
+        输入验证码：
+        <input type="text" name="code">
+    </p>
+    <p>
+        <input type="submit" name="">
+    </p>
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板标签</title>
+</head>
+<body>
+{$hello},thinkphp <br>
+{$data["name"]}<br>
+{$data.age}<br>
+{$data.sex}<br>
+
+{for start="1" end="10"}
+{$i}
+{/for}
+<br>
+
+{$pass|md5}
+<br>
+{$time|date="Y-m-d H:i:s",###}
+<br>
+简写方式<br>
+{:md5($pass)}<br>
+{:date("Y-m-d H:i:s")}
+<br>
+
+<br>
+{$status == 1 ? "正确" : "错误"}
+<br>
+
+<br>
+
+{literal}
+原样输出{$name}
+{/literal}
+
+
+</body>
+</html>

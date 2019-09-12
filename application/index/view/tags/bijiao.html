@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>if</h2>
+{if condition="$a > $b"}
+    <p>a > b</p>
+{else/}
+    <p>a !< b</p>
+{/if}
+
+<h2>switch</h2>
+{switch name="week"}
+    {case value="1"}周一{/case}
+    {case value="2"}周二{/case}
+    {case value="3"}周三{/case}
+    {case value="4"}周四{/case}
+    {case value="5"}周五{/case}
+    {case value="6"}周六{/case}
+    {default/}周日
+{/switch}
+
+
+<h2>in</h2>
+{in name="week" value="1,2,3,4,5,6"}
+    合法数据
+    {else/}
+    不合法数据
+{/in}
+
+<h2>between</h2>
+{between name="week" value="0,6"}
+    <p>合法数据</p>
+    {else/}
+    不合法数据
+{/between}
+
+
+</body>
+</html>

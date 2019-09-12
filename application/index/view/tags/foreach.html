@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>foreach</title>
+</head>
+<body>
+
+<h2>foreach</h2>
+{foreach name="data" item="val" key="key"}
+    <p>{$key} {$val.id} {$val.username}</p>
+{/foreach}
+
+
+<h2>for</h2>
+{for name="id" start="0" end="10" comparison="elt" step="2"}
+<p>{$id}</p>
+{/for}
+
+</body>
+</html>

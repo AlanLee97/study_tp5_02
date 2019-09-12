@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历</title>
+</head>
+<body>
+
+
+<h2>volist</h2>
+{volist name="data" id="val"}
+    <p>{$key} {$val.id} {$val.username}</p>
+{/volist}
+
+<h2>volist截取数据</h2>
+{volist name="data" id="val" offset="5" length="5"}
+<p>{$key} {$val.id} {$val.username}</p>
+{/volist}
+
+<h2>volist奇偶行</h2>
+{volist name="data" id="val" mod=2}
+    {eq name="mod" value="0"}
+        <p style="color:orangered">{$key} {$val.id} {$val.username}</p>
+    {/eq}
+
+    {eq name="mod" value="1"}
+        <p style="color:mediumseagreen">{$key} {$val.id} {$val.username}</p>
+    {/eq}
+{/volist}
+
+<h2>volist空数据默认值</h2>
+{volist name="data1" id="val" empty="没有任何数据"}
+    <p>{$val.id} {$val.username}</p>
+{/volist}
+
+
+
+
+
+</body>
+</html>
